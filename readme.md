@@ -1,18 +1,11 @@
 # jarrus-web
 
-Vanilla started react project with my generic base:
+What's inside:
 * React + React-Redux
 * Jasmine/Karma/Enzyme
 * ESLint, using AirBnb + Jasmine + Jsx A11y
-* Webpack, ES6 on hot reloading
+* Webpack, ES6 hot reloading
 * React Router
-* Not SSR
-* Pre-hooks
-
-## Note to self, early includes
-* firebase-tools, firebase
-* @material-ui/core, @material-ui/lab
-
 
 ## Required to Build:
 
