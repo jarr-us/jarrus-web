@@ -1,0 +1,30 @@
+{
+    "extends": [
+        "airbnb",
+        "plugin:jasmine/recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": [
+        "jasmine"
+    ],
+    "env": {
+        "jasmine": true,
+        "browser": true,
+        "node": true
+
+    },
+    "rules": {
+        "react/forbid-prop-types": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                "components": [ "Link" ],
+                "specialLink": [ "to" ]
+            }
+        ],
+        "jasmine/no-describe-variables": "warn",
+        "jasmine/no-assign-spyon": "warn"
+    }
+}

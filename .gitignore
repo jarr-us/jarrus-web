@@ -1,0 +1,14 @@
+node_modules/
+public/dist/
+.env.test
+.env.development
+.env.production
+functions/node_modules/
+package-lock.json
+yarn-error.log
+coverage/
+.vscode/
+yarn.lock
+.firebase/
+package.lock
+debug.log

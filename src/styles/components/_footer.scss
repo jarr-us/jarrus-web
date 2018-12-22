@@ -1,0 +1,18 @@
+.footer {
+  background: #333;
+  padding: 2rem 0rem 5rem 0rem;
+  color: white;
+  border-top: 6px solid $primary-shadow;
+}
+
+.footer__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $m-size 0;
+}
+
+.footer .footer__copyright {
+  font-size: $s-size;
+  color: $primary-light;
+}

@@ -1,0 +1,12 @@
+.web-container {
+  padding-top: $header-height;
+  transition: all .6s ease-in-out;
+}
+
+.web-container.menu-open {
+  padding-left: $menu-width;
+}
+
+.web-container.menu-closed .side-menu {
+  left: -$menu-width;
+}
