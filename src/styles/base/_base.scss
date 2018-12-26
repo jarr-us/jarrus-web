@@ -7,11 +7,11 @@ html {
 }
 
 body {
-  color: $dark-grey;
-  font-family: Roboto, sans-serif;
+  background-color: $page-background-color;
+  color: $page-text-color;
+  font-family: 'Roboto', sans-serif;
   font-size: $m-size;
   line-height: 1.6;
-  background-color: #dadada;
 }
 
 button {

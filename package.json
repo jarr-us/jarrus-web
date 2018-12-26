@@ -1,8 +1,8 @@
 {
-  "name": "creighcl-react-starter",
+  "name": "jarrus-web-main",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Chris Creighton",
+  "author": "Chris & Jason Creighton",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",
@@ -10,9 +10,17 @@
     "dev-server": "webpack-dev-server",
     "start": "babel-node server/server.js --presets env",
     "lint": "./node_modules/.bin/eslint src/**/*.js src/**/*.jsx test/**/*.js test/**/*.jsx",
-    "validate": "gulp validate"
+    "validate": "gulp validate",
+    "push:dev": "firebase deploy --project default",
+    "push:next": "firebase deploy --project next",
+    "push:live": "firebase deploy --project live",
+    "go-dev": "npm run build:dev && npm run push:dev",
+    "go-next": "npm run build:prod && npm run push:next",
+    "go-live": "npm run build:prod && npm run push:live"
   },
   "dependencies": {
+    "@material-ui/core": "^3.7.1",
+    "@material-ui/lab": "^3.0.0-alpha.26",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",

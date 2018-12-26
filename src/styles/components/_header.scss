@@ -1,5 +1,6 @@
 .header {
   background: $primary-dark;
+  color: $primary-dark-text;
   height: $header-height;
   width: 100%;
   -webkit-box-shadow: 0 1px 8px rgba(0,0,0,.3);
@@ -11,5 +12,41 @@
   top: 0;
   left: 0;
   z-index: 10;
+
+  .content {
+    margin: auto;
+    width: 100%;
+    display: flex;
+
+    img {
+      height: 45px;
+      width: 45px;
+    }
+
+    div.title {
+      margin: auto 0px;
+      font-weight: bold;
+      font-size: $l-size;
+      letter-spacing: -1px;
+      font-family: 'Roboto Mono'
+    }
+
+    .menuButton {
+      margin: auto 0;
+      height: 40px;
+      width: 40px;
+      border-radius: 18px;
+      padding: 8px;
+      cursor: pointer;
+      transition: .5s ease-in-out all;
+
+      i {
+        margin: 7px;
+      }
+    }
+    .menuButton:hover {
+      background-color: $primary-shadow !important;
+    }
+  }
 }
 

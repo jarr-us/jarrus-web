@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "dev-jarrus-web-main",
+    "next": "next-jarrus-web-main",
+    "live": "jarrus-web-main"
+  }
+}
