@@ -1,22 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactTable from 'react-table';
-import { createReactTableColumnsByExampleObject } from '../../utils/react-table-util';
+import MaterialTable from 'material-table';
+import {
+  createMaterialTableColumnsByExampleObject,
+  transformMaterialTableData,
+} from '../../utils/material-table-util';
 
-const DEFAULT_ROW_COUNT = 5;
-const DEFAULT_REACT_TABLE_CLASSES = '-striped -highlight';
+const TABLE_TITLE = 'Matching Session';
+const NO_RECORDS_MSG = 'No records to display';
+
 const RunResultTable = ({ results }) => {
   const exampleRun = results[0];
   if (!exampleRun) return null;
-  const columns = createReactTableColumnsByExampleObject(exampleRun);
+  const columns = createMaterialTableColumnsByExampleObject(exampleRun);
+  const data = transformMaterialTableData(results);
 
   return (
-    <div>
-      <ReactTable
-        className={DEFAULT_REACT_TABLE_CLASSES}
+    <div style={{ marginTop: 24 }}>
+      <MaterialTable
         columns={columns}
-        data={results}
-        defaultPageSize={DEFAULT_ROW_COUNT}
+        title={TABLE_TITLE}
+        data={data}
+        localization={{
+          emptyDataSourceMessage: NO_RECORDS_MSG,
+        }}
       />
     </div>
   );

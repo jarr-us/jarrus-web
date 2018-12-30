@@ -1,13 +1,10 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import fetchSessionService, { fetchSessionResults } from './session-service';
 import SessionListingFilter from '../../components/session-listing-filter';
 import RunResultTable from '../../components/run-result/run-result-table';
 import ErrorBox from '../../components/error-box';
 
 export const PAGE_DIV_CLASSNAME = 'session-container';
-const PAGE_TITLE = 'JARRUS Session Explorer';
 const wrapInPageDiv = jsx => (<div className={PAGE_DIV_CLASSNAME}>{jsx}</div>);
 
 class PageSession extends React.Component {
@@ -76,22 +73,13 @@ class PageSession extends React.Component {
 
     return wrapInPageDiv(
       <React.Fragment>
-        <h1>{PAGE_TITLE}</h1>
-        <Card style={{ padding: 18 }}>
-          <CardContent>
-            <SessionListingFilter
-              onChange={this.handleSessionFilter}
-              onSessionsReceived={this.handleSessionFilter}
-              sessions={sessions}
-            />
-          </CardContent>
-        </Card>
+        <SessionListingFilter
+          onChange={this.handleSessionFilter}
+          onSessionsReceived={this.handleSessionFilter}
+          sessions={sessions}
+        />
         { results && (
-          <Card style={{ marginTop: 24, padding: 18 }}>
-            <CardContent>
-              <RunResultTable results={results} />
-            </CardContent>
-          </Card>
+          <RunResultTable results={results} />
         )}
       </React.Fragment>,
     );

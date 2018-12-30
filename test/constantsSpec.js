@@ -24,6 +24,7 @@ describe('APP Constants', () => {
         tonalOffset: 0.2,
       },
       typography: {
+        fontSize: 24,
         useNextVariants: true,
       },
     });

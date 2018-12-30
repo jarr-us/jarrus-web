@@ -14,6 +14,7 @@ export const MUI_THEME_SETTINGS = {
     tonalOffset: 0.2,
   },
   typography: {
+    fontSize: 24,
     useNextVariants: true,
   },
 };

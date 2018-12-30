@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 
 export const SOLUTION_DD_CLASSNAME = 'solutionSelector';
 export const SESSION_DD_CLASSNAME = 'sessionSelector';
@@ -86,7 +87,7 @@ class SessionListingFilter extends React.Component {
     return (
       <div className={FILTER_CLASSNAME}>
         <div>
-          Solution
+          <Typography variant="h6">Solution</Typography>
           <select
             className={SOLUTION_DD_CLASSNAME}
             onChange={this.onSolutionSelect}
@@ -102,7 +103,7 @@ class SessionListingFilter extends React.Component {
           </select>
         </div>
         <div>
-          Session
+          <Typography variant="h6">Session</Typography>
           <select
             className={SESSION_DD_CLASSNAME}
             onChange={this.onSessionSelect}

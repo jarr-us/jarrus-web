@@ -21,10 +21,10 @@ describe('COMPONENT > Run Result> RunResultTable', () => {
       expect(component.html()).toBeNull();
     });
 
-    it('renders a reacttable if props.results[0] exists', () => {
+    it('renders a materialTable if props.results[0] exists', () => {
       const component = mount(<RunResultTable results={VALID_RESULTS} />);
 
-      expect(component.find('ReactTable').length).toBe(1);
+      expect(component.find('MaterialTable').length).toBe(1);
     });
   });
 });
