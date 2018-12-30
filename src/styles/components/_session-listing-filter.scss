@@ -1,0 +1,19 @@
+.session-listing-filter {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div {
+    flex-grow: 1;
+    font-size: $font-size-large;
+    font-weight: bold;
+    display: flex;
+    padding: 0 2rem;
+
+    select {
+      font-size: $font-size-large;
+      padding: 0.4rem;
+      flex-grow: 1;
+      margin-left: 0.75rem;
+    }
+  }
+}

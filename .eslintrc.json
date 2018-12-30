@@ -24,7 +24,9 @@
                 "specialLink": [ "to" ]
             }
         ],
+        "jsx-a11y/no-onchange": "off",
         "jasmine/no-describe-variables": "warn",
-        "jasmine/no-assign-spyon": "warn"
+        "jasmine/no-assign-spyon": "warn",
+        "jasmine/no-spec-dupes": "off"
     }
 }

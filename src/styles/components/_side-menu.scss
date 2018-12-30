@@ -7,6 +7,7 @@
   padding-top: $menu-top-pad;
   transition: all .5s ease-in-out;
   background-color: white;
+  border-right: 1px solid #eaeaea;
 
   a {
     text-decoration: none;
@@ -14,5 +15,9 @@
 
   h6 {
     font-size: $font-size-small;
+  }
+
+  h6.selected {
+    font-weight: 700;
   }
 }

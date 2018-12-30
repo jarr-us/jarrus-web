@@ -8,6 +8,7 @@ import createHistory from 'history/createBrowserHistory';
 import configureStore from './store/configureStore';
 import LoadingPage from './containers/LoadingPage';
 import './styles/styles.scss';
+import 'react-table/react-table.css';
 import WebContainer from './containers/WebContainer';
 import { MUI_THEME_SETTINGS } from './constants';
 

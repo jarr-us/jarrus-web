@@ -7,8 +7,19 @@ import SideMenuItem from './side-menu-item';
 export const SideMenu = ({ location }) => (
   <div className="side-menu">
     <MenuList>
-      <Link to="/" selected={location.pathname === '/'}>
-        <SideMenuItem icon="table_chart" primaryText="Solutions" />
+      <Link to="/">
+        <SideMenuItem
+          selected={location.pathname === '/'}
+          icon="table_chart"
+          primaryText="Solutions"
+        />
+      </Link>
+      <Link to="/session">
+        <SideMenuItem
+          selected={location.pathname === '/session'}
+          icon="assessment"
+          primaryText="Session Explorer"
+        />
       </Link>
       <a
         href="https://blog.jarr.us"
