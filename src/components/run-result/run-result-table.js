@@ -6,7 +6,7 @@ import {
   transformMaterialTableData,
 } from '../../utils/material-table-util';
 
-const TABLE_TITLE = 'Matching Session';
+const TABLE_TITLE = 'Session Results';
 const NO_RECORDS_MSG = 'No records to display';
 
 const RunResultTable = ({ results }) => {

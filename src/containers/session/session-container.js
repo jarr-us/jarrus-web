@@ -1,8 +1,12 @@
 import React from 'react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 import fetchSessionService, { fetchSessionResults } from './session-service';
 import SessionListingFilter from '../../components/session-listing-filter';
 import RunResultTable from '../../components/run-result/run-result-table';
 import ErrorBox from '../../components/error-box';
+import ResultFilter from '../../components/run-result/result-filter';
 
 export const PAGE_DIV_CLASSNAME = 'session-container';
 const wrapInPageDiv = jsx => (<div className={PAGE_DIV_CLASSNAME}>{jsx}</div>);
@@ -35,6 +39,10 @@ class PageSession extends React.Component {
     this.setState({ errMessage: message });
   }
 
+  handleFilteredResults(filteredResults) {
+    this.setState({ filteredResults });
+  }
+
   handleSessionFilter(updates) {
     const { selectedSolution, selectedSession } = updates;
     this.populateSessionResults(selectedSolution, selectedSession);
@@ -65,6 +73,7 @@ class PageSession extends React.Component {
       errMessage,
       results,
       sessions,
+      filteredResults,
     } = this.state;
 
     if (errMessage) {
@@ -79,7 +88,17 @@ class PageSession extends React.Component {
           sessions={sessions}
         />
         { results && (
-          <RunResultTable results={results} />
+          <React.Fragment>
+            <RunResultTable results={results} />
+            <Card style={{ marginTop: 24 }}>
+              <CardContent>
+                <Typography variant="h5">Result Filtering</Typography>
+                <ResultFilter onFilterData={o => console.log(o)} data={results} />
+              </CardContent>
+            </Card>
+            Currently filtered results:
+            { (filteredResults || []).length }
+          </React.Fragment>
         )}
       </React.Fragment>,
     );

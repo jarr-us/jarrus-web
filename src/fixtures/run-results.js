@@ -33,7 +33,7 @@ const runResults = [
     ComputerName: 'GA-97',
     ParentSelectionType: 'StochasticUniversalSamplingSelection1',
     MutationType: 'InversionMutation',
-    CrossoverType: 'OrderedCrossover',
+    CrossoverType: 'DisorderedCrossover',
     LowestScoreIsBest: true,
     PoolSize: 100,
     Iterations: 22000,

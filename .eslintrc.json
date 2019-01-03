@@ -16,6 +16,7 @@
     },
     "rules": {
         "react/forbid-prop-types": "off",
+        "react/no-did-update-set-state": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "jsx-a11y/anchor-is-valid": [
             "error",
